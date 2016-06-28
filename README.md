@@ -2,15 +2,16 @@
 
 ## Description
 
-The fibonacci sequence is one of the more bizarre naturally occuring sequences.  It can be found all over nature and is the basis for the golden ratio.  The problem is that recusive algorithms, while very simple, are extremely slow and inefficient.  Here is where we move towards a producer and consumer model with multi threading to make the repeated task a bit more efficient.
+The fibonacci sequence is one of the more bizarre naturally occurring sequences.  It can be found all over nature and is the basis for the golden ratio.  The problem is that recursive algorithms, while very simple, are extremely slow and inefficient.  Here is where we move towards a producer and consumer model with multi threading to make the repeated task a bit more efficient.
 
 ## Tasks
 * Make `Fibonacci` an executable task by implementing `Runnable`. 
 	* Add a constructor that sets a class property for the number desired. This is required since run cannot take arguments.
 	* Have the run method print out the number and the result at the end 
+* Create an `ExecutorService` using a fixed thread pool of 100.  This **should** prevent your computer from exploding.
 * Using a thread (producer) read in the included file of numbers.  These represent the nth numbers in the fibonacci sequence you need to find.
-* `offer` the numbers on to a BlockingQueue that allows no more than 1000 items at a time.
-* Using another thread (consumer) pull the items off the queue and submit new fibonacci tasks to the executor to run in parallel.
+* `put` the numbers on to a BlockingQueue that allows no more than 1000 items at a time.
+* Using another thread (consumer) pull the items off the queue and submit new fibonacci tasks to the executor (step 2) to run in parallel.
 
 ## Hard Mode
 * Change `Fibonacci` to be a callable.
