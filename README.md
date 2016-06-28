@@ -1,4 +1,4 @@
-# Fibonacci MultiThreading
+# The Curse of Fibonacci
 
 ## Description
 
